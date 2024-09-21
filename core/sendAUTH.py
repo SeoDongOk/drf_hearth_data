@@ -27,4 +27,4 @@ def sendAUTH(userInput,issue_data):
                     };
   res=Response(auth_url,commonHeaders,jsonConverter(authBody,"json"),"POST")
   res = jsonConverter(res.text,"dict")
-  return {"cxId":res["cxId"], "token":res["token"],  "txId":res["reqTxId"]}
+  return {"cxId":res["cxId"], "token":res["token"],  "txId":res["reqTxId"], "userInfoEditer":userInfoEditer(encode_userInput)}

@@ -6,7 +6,7 @@ def jsonConverter(data,method):
       dict_data = json.loads(data)
       return dict_data
     elif method == "json":
-      dict_data = json.dumps(data)
-      return dict_data
+      json_data = json.dumps(data)
+      return json_data
   except Exception as e:
     raise Exception("Error on jsonConverter: ", e)
