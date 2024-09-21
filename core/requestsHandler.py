@@ -7,6 +7,7 @@ def Response(url,header,body,type):
       return response
     elif type == "POST":
       response=requests.post(url=url,headers=header,data=body)
+      print(f"request error in {url}, header: {header}, body: {body}")
       return response
   except Exception as e:
     raise Exception(f"request error in {url}, header: {header}, body: {body} \n\n\n with ", e)

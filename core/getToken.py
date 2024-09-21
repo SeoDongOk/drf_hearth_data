@@ -1,5 +1,6 @@
+import json
 from .requestsHandler import Response
-def getToken(data):
+def getToken():
   try:
     issue_token_url = "https://www.nhis.or.kr/oacx/issue_token.jsp"
     commonHeaders = {
@@ -10,7 +11,7 @@ def getToken(data):
                     };
     customBody = { "token": "" };
     response=Response(issue_token_url,commonHeaders,customBody,"POST")
-    
-    return response.text
+    dict_response = json.loads(response.text)
+    return dict_response
   except Exception as e:
     raise Exception("issue token request error", e)

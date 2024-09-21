@@ -1,0 +1,53 @@
+{
+  "id": "",
+  "provider": "toss_v1.5",
+  "token": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxMzFmODE2OGJjMDQ0ZThkODQzMWZhNTRkMzA4OWVlYTJ2Mzc2NnNwIiwiaXNzIjoib2FjeC1zZXJ2ZXItbWFydGluIiwic3ViIjoiR0VORVJBVEVfVFhJRCIsImlhdCI6MTcyNjkyMjQ5MiwiZXhwIjoxNzI2OTIyNzkyfQ.K9Zzt5czi_QH8Fby-IW8YaWKYqbKINYf9wDB1XjA8_s",
+  "txId": "131f8168bc044e8d8431fa54d3089eea2v3766sp",
+  "appInfo": {
+    "code": "",
+    "path": "",
+    "type": ""
+  },
+  "userInfo": {
+    "isMember": false,
+    "name": "7ISc64+Z7Jil",
+    "phone": "MDEwNjcyNzc3MzY=",
+    "phone1": "MDEw",
+    "phone2": "NjcyNzc3MzY=",
+    "ssn1": "",
+    "ssn2": "",
+    "birthday": "MjAwMDAyMTE=",
+    "privacy": 1,
+    "policy3": 0,
+    "policy4": 1,
+    "terms": 1,
+    "telcoTycd": null,
+    "access_token": "",
+    "token_type": "",
+    "state": "",
+    "mtranskeySsn2": null
+  },
+  "deviceInfo": {
+    "code": "PC",
+    "browser": "WB",
+    "os": "",
+    "universalLink": false
+  },
+  "contentInfo": {
+    "signTarget": "",
+    "signTargetTycd": "nonce",
+    "signType": "GOV_SIMPLE_AUTH",
+    "requestTitle": "",
+    "requestContents": ""
+  },
+  "providerOptionInfo": {
+    "callbackUrl": "",
+    "reqCSPhoneNo": "1",
+    "upmuGb": "",
+    "isUseTss": "Y",
+    "isNotification": "Y",
+    "isPASSVerify": "Y",
+    "isUserAgreement": "Y"
+  },
+  "compareCI": false
+}
