@@ -1,4 +1,4 @@
-import json
+import time
 from .requestsHandler import Response
 from .jsonConverter import jsonConverter
 from .encoder import userIpnutEncoder
@@ -9,7 +9,7 @@ def sendAUTH(userInput,issue_data):
   auth_url = "https://www.nhis.or.kr/oacx/api/v1.0/authen/request";
   authBody = {
     "id": "",
-    "provider": "toss_v1.5",
+    "provider": "banksalad_v1.5",
     "token":issue_data["token"],
     "txId":issue_data["txId"],
     "appInfo": { "code": "", "path": "", "type": "" },
@@ -25,6 +25,6 @@ def sendAUTH(userInput,issue_data):
                       "Cookie":"JSESSIONID=uXvc3QjJA-D56m9HGvpzE86OFHatEff21kA1VYgiLqMgoMm8uS-M!1241807923; WMONID=jZ5g3-x7usf",
                       "Content-Type": "application/json; charset=utf-8",
                     };
-  Response(auth_url,commonHeaders,jsonConverter(authBody,"json"),"POST")
-  
-  return 
+  res=Response(auth_url,commonHeaders,jsonConverter(authBody,"json"),"POST")
+  res = jsonConverter(res.text,"dict")
+  return {"cxId":res["cxId"], "token":res["token"],  "txId":res["reqTxId"]}
