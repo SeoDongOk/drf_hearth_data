@@ -20,4 +20,3 @@ class UserInfoView(APIView):
             login_result=login(sendAUTH_data,authChecker_data)
             return Response(login_result, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
- 
