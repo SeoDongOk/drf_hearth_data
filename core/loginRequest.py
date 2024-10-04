@@ -15,6 +15,4 @@ def login(sendAuth_data,auth_data):
   }
   
   res = Response(login_url,common_header,parse.urlencode(hiddenData),"POST")
-  print(res)
-  # ssotoken이 set-Cookie에 없음
   return res.text

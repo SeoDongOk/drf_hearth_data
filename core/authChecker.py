@@ -37,7 +37,6 @@ def authChecker(data):
       if int(time.time()-startTime) > 20:
         break
       time.sleep(2)
-      print("time: ", time.time())
       res=Response(authCheckUrl,commonHeaders,jsonConverter(authCheckBody,"json"),"POST")
       if "성공" in str(res.text):
         return res.text
