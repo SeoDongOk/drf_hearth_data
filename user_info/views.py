@@ -7,6 +7,7 @@ from .serializers import UserInfoSerializer
 from core.getToken import getToken
 from core.sendAUTH import sendAUTH
 from core.authChecker import authChecker
+from core.loginRequest import login
 
 class UserInfoView(APIView):
     def post(self, request):
@@ -16,6 +17,6 @@ class UserInfoView(APIView):
             toekndata =getToken()
             sendAUTH_data = sendAUTH(serializer.data,toekndata)
             authChecker_data=authChecker(sendAUTH_data)
-            return Response(authChecker_data, status=status.HTTP_201_CREATED)
+            login_result=login(sendAUTH_data,authChecker_data)
+            return Response(login_result, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
- 
