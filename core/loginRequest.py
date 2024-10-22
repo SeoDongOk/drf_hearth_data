@@ -1,3 +1,4 @@
+import pandas as pd
 from urllib import parse
 from .getHidden import getHiddenData
 from .requestsHandler import Response
@@ -15,4 +16,4 @@ def login(sendAuth_data,auth_data):
   }
   
   res = Response(login_url,common_header,parse.urlencode(hiddenData),"POST")
-  return res.text
+  return pd.read_html(res.text)
