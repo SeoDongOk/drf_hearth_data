@@ -3,5 +3,6 @@
 # 목적
 
 - django rest framework 공부
-- 스크래핑 기능 동적으로 만들기
-- MyData 활용해보기
+- Javascript Axios로 구현했던 국민건강보험 공단 로그인을 Python으로 재구현
+- 2023년 건강보험 연말정산내역을 조회하여 데이터 프레임으로 반환하는 REST API의 POST방식으로 구현
+
